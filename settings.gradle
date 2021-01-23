@@ -1,0 +1,2 @@
+rootProject.name = "ExpandingCards"
+include ':app'
