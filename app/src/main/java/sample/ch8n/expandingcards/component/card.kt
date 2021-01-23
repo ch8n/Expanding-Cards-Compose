@@ -12,41 +12,45 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageAsset
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.unit.dp
+import androidx.ui.tooling.preview.Preview
 import sample.ch8n.expandingcards.R
 
 @Composable
-fun CardComponent() {
-    Card(
-        modifier = Modifier.fillMaxWidth().padding(8.dp),
-        elevation = 8.dp
-    ) {
-
-        Box(
-            modifier = Modifier.fillMaxWidth().height(200.dp)
+fun CardComponent(modifier: Modifier) {
+    Box(modifier = modifier) {
+        Card(
+            modifier = Modifier.fillMaxWidth().padding(8.dp),
+            elevation = 8.dp
         ) {
 
-            val (userName, imageUrl) = getRandomSample()
+            Box(
+                modifier = Modifier.fillMaxWidth().height(200.dp)
+            ) {
 
-            loadImage(
-                url = imageUrl,
-                placeholder = R.drawable.ic_launcher_background
-            ).value?.let {
-                Image(
-                    modifier = Modifier.fillMaxSize(),
-                    asset = it.asImageAsset(),
-                    contentScale = ContentScale.Crop
+                val (userName, imageUrl) = getRandomSample()
+
+                loadImage(
+                    url = imageUrl,
+                    placeholder = R.drawable.ic_launcher_background
+                ).value?.let {
+                    Image(
+                        modifier = Modifier.fillMaxSize(),
+                        asset = it.asImageAsset(),
+                        contentScale = ContentScale.Crop
+                    )
+                }
+
+                Text(
+                    text = userName,
+                    color = Color.White,
+                    modifier = Modifier.align(Alignment.BottomEnd)
+                        .padding(8.dp)
                 )
+
             }
 
-            Text(
-                text = userName,
-                color = Color.White,
-                modifier = Modifier.align(Alignment.BottomEnd)
-                    .padding(8.dp)
-            )
 
         }
-
-
     }
+
 }
