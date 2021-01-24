@@ -18,6 +18,7 @@ import sample.ch8n.expandingcards.R
 @Composable
 fun CardComponent(modifier: Modifier) {
     Box(modifier = modifier) {
+
         Card(
             modifier = Modifier.fillMaxWidth().padding(8.dp),
             elevation = 8.dp
