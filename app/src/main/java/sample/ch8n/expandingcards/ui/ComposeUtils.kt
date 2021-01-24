@@ -1,4 +1,4 @@
-package sample.ch8n.expandingcards.component
+package sample.ch8n.expandingcards.ui
 
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable
