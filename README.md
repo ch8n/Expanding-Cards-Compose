@@ -34,7 +34,7 @@ Sample of Cards which on click expands and collapse Horizontally
 * [Row](https://compose.academy/layout/row)
 * [Text](https://compose.academy/material/text)
 * [Image](https://foso.github.io/Jetpack-Compose-Playground/foundation/image/)
-* Image Loading : using (`Picasso`)[https://square.github.io/picasso/], code inspiration from (CodingWithMitch)[https://www.youtube.com/watch?v=ktOWiLx83bQ&ab_channel=CodingWithMitch]
+* Image Loading : using [`Picasso`](https://square.github.io/picasso/), code inspiration from [CodingWithMitch](https://www.youtube.com/watch?v=ktOWiLx83bQ&ab_channel=CodingWithMitch)
 
 # TODO
 * Test Cases
