@@ -4,7 +4,7 @@
 ![AndroidBites](./androidbites_space.jpg)
 
 ## :hand: About
-Hola Amigos! 🙌, welcome to my coding playground!👩‍💻, do follow me on (`Twitter`)[https://bit.ly/ch8n-twitter]
+Hola Amigos! 🙌, welcome to my coding playground!👩‍💻, do follow me on [`Twitter`](https://bit.ly/ch8n-twitter)
 
 Do let me know if you find something useful or want to suggest some improvement
 also don't forget to checkout of blogs at [`chetangupta.net|AndroidBites|Big-Brain-Kotlin`](https://chetangupta.net/)
