@@ -1,6 +1,8 @@
 package sample.ch8n.expandingcards.component
 
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -21,18 +23,13 @@ import androidx.compose.ui.unit.dp
 import androidx.ui.tooling.preview.Preview
 import sample.ch8n.expandingcards.R
 
-@Preview(showBackground = true, widthDp = 400, heightDp = 300)
+@ExperimentalAnimationApi
 @Composable
-fun CardComponent() {
+fun CardComponent(isExpanded: Boolean) {
 
-    var isExpanded by remember { mutableStateOf(false) }
 
     Card(
-        modifier = Modifier
-            .padding(8.dp)
-            .clickable(onClick = {
-                isExpanded = !isExpanded
-            }),
+        modifier = Modifier.padding(8.dp),
         elevation = 8.dp
     ) {
 
@@ -53,12 +50,14 @@ fun CardComponent() {
                 )
             }
 
-            Text(
-                text = userName,
-                color = Color.White,
-                modifier = Modifier.align(Alignment.BottomEnd)
-                    .padding(8.dp)
-            )
+            if (isExpanded) {
+                Text(
+                    text = userName,
+                    color = Color.White,
+                    modifier = Modifier.align(Alignment.BottomEnd)
+                        .padding(8.dp)
+                )
+            }
 
         }
 
